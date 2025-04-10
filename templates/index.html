@@ -6,9 +6,10 @@
     <title>progetto flask</title>
 </head>
 <body>
-    <h1>profilo di {{df["nome"]}} {{df["cognome"]}}</h1>
-    <p>Scuola: {{df["scuola"]}}</p>
-    <p>Hobby: {{df["Hobby"]}}</p>
-    <a href="{{ url_for('modifica_profilo') }}">modifica profilo</a>
+    <h1>profilo di {{df['Nome']}} {{df['Cognome']}}</h1>
+
+    <p>Scuola: {{df['Scuola']}}</p>
+    <p>Hobby: {{df['Hobby']}}</p>
+    <a href="{{ url_for('modifica') }}">modifica profilo</a>
 </body>
 </html>

@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pagina modifica</title>
-</head>
+<html>
+
 <body>
     <h1>Modifica il tuo profilo</h1>
-    <form action="{{ url_for('modifica_profilo') }}" method="post">
-        <p>Nome: </p>
-        <input type="text" id="nome" name="nome"><br>
-        <p>Cognome:</p>
-        <input type="text" id="cognome" name="cognome"><br>
-        <button type="submit">Salva</button><br>
-        <a href="{{ url_for('ritorna') }}">torna alla home</a>
+    <form method="post">
+        <label>Nome:
+            <input type="text" name="nome" value="{{ dati['Nome'] }}" required>
+        </label><br><br>
+        <label>Cognome:
+            <input type="text" name="cognome" value="{{ dati['Cognome'] }}" required>
+        </label><br><br>
+        <label>Scuola:
+            <input type="text" name="scuola" value="{{ dati['Scuola'] }}">
+        </label><br><br>
+        <label>Hobby:
+            <input type="text" name="hobby" value="{{ dati['Hobby'] }}">
+        </label><br><br>
+        <button type="submit">Salva</button>
+    </form>
+    <br>
+
 </body>
+
 </html>
