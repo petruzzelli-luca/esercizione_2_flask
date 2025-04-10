@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aggiungi Profilo</title>
+</head>
+<body>
+    <h1>Aggiungi un nuovo profilo</h1>
+    <form method="post">
+        <label>Nome:
+            <input type="text" name="nome" required>
+        </label><br><br>
+        <label>Cognome:
+            <input type="text" name="cognome" required>
+        </label><br><br>
+        <label>Scuola:
+            <input type="text" name="scuola">
+        </label><br><br>
+        <label>Hobby:
+            <input type="text" name="hobby">
+        </label><br><br>
+        <button type="submit">Aggiungi</button>
+    </form>
+    <br>
+    <a href="{{ url_for('home') }}">Torna alla home</a>
+</body>
+</html>

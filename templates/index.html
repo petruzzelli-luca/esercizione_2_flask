@@ -1,15 +1,23 @@
+index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>progetto flask</title>
+    <title>Progetto Flask</title>
 </head>
 <body>
-    <h1>profilo di {{df['Nome']}} {{df['Cognome']}}</h1>
-
-    <p>Scuola: {{df['Scuola']}}</p>
-    <p>Hobby: {{df['Hobby']}}</p>
-    <a href="{{ url_for('modifica') }}">modifica profilo</a>
+    <h1>Lista con tutti i profili</h1>
+    <a href="{{ url_for('aggiungi') }}" style="margin-bottom: 20px; display: inline-block;">Aggiungi nuovo profilo</a>
+    
+    {% for profilo in profili %}
+        <div class="profilo">
+            <h2>Profilo di {{profilo['Nome']}} {{profilo['Cognome']}}</h2>
+            <p>Scuola: {{profilo['Scuola']}}</p>
+            <p>Hobby: {{profilo['Hobby']}}</p>
+            <a href="{{ url_for('modifica', indice=loop.index0) }}">Modifica profilo</a>
+        </div>
+        <hr>
+    {% endfor %}
 </body>
 </html>
